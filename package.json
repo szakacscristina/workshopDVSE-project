@@ -1,0 +1,39 @@
+{
+    "name": "workshop-dvse",
+    "version": "1.0.0",
+    "description": "",
+    "license": "MIT",
+    "author": "Szakacs Cristina",
+    "scripts": {
+        "start": "webpack-dev-server --mode development",
+        "build": "webpack --mode development"
+    },
+    "dependencies": {
+        "axios": "^0.19.2",
+        "react": "*",
+        "react-dom": "*",
+        "react-redux": "^7.2.0",
+        "react-router": "^5.2.0",
+        "react-router-dom": "^5.2.0",
+        "redux": "^4.0.5"
+    },
+    "devDependencies": {
+        "@types/axios": "^0.14.0",
+        "@types/react": "^16.9.38",
+        "@types/react-dom": "^16.9.8",
+        "@types/react-redux": "^7.1.9",
+        "@types/react-router": "^5.1.8",
+        "@types/react-router-dom": "^5.1.5",
+        "@types/redux": "^3.6.31",
+        "copy-webpack-plugin": "^6.0.3",
+        "css-loader": "^3.6.0",
+        "node-sass": "^4.14.1",
+        "sass-loader": "^8.0.2",
+        "style-loader": "^1.2.1",
+        "ts-loader": "^8.3.0",
+        "typescript": "^3.9.5",
+        "webpack": "^4.46.0",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.2"
+    }
+}
