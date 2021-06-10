@@ -1,0 +1,61 @@
+.button {
+    font-size: $textSize-m;
+    font-family: $fontFamily;
+    display: flex;
+    align-items: center;
+
+    color: black;
+    cursor: pointer;
+    outline: none;
+    padding: $spacing-s;
+    text-decoration: "none";
+    box-shadow: $shadow;
+    display: inline-block;
+    border-radius: $radius;
+    box-sizing: border-box;
+    white-space: nowrap;
+    border-color: transparent;
+    background-color: $color-default;
+
+    &:hover {
+        // stilizare doar in cazul in care mause-ul este peste button
+        background-color: $color-highlight;
+    }
+
+    &__skin {
+        &--primary {
+            background-color: $color-primary;
+        }
+
+        &--highlight {
+            background-color: $color-highlight;
+        }
+
+        &--danger {
+            background-color: $color-danger;
+        }
+
+        &--succes {
+            background-color: $color-success;
+        }
+    }
+
+    &__size {
+        &--s {
+            font-size: $textSize-s;
+        }
+
+        &--l {
+            font-size: $textSize-l;
+        }
+    }
+
+    &--active {
+        background-color: $color-highlight;
+    }
+
+    &--disabled {
+        pointer-events: none;
+        opacity: 0.6;
+    }
+}

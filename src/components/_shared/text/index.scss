@@ -1,0 +1,39 @@
+.text {
+    font-family: $fontFamily;
+    color: black;
+    font-size: $textSize-m;
+    display: inline;
+
+    &--strong {
+        font-weight: bold;
+    }
+
+    &__skin {
+        &--primary {
+            color: $color-primary;
+        }
+
+        &--highlight {
+            color: $color-highlight;
+        }
+
+        &--danger {
+            color: $color-danger;
+        }
+
+        &--succes {
+            color: $color-success;
+        }
+    }
+
+    &__size {
+        &--s {
+            font-size: $textSize-s;
+        }
+
+        &--l {
+            font-size: $textSize-l;
+        }
+
+    }
+}

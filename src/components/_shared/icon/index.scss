@@ -1,0 +1,43 @@
+.icon {
+    position: relative;
+    padding: $spacing-s;
+
+    img {
+        width: 1em;
+        height: 1em;
+    }
+
+    &__size--l {
+        img {
+            width: 1.5em;
+            height: 1.5em;
+        }
+    }
+
+    &__size--s {
+        img {
+            width: 0.5em;
+            height: 0.5em;
+        }
+    }
+
+    .badge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1em;
+        height: 1em;
+        display: flex;
+        justify-content: center;
+        background-color: $color-highlight;
+        border-radius: 50%;
+
+    }
+
+    &--clickable {
+        cursor: pointer;
+    }
+
+
+
+}
