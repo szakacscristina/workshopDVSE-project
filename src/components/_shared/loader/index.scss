@@ -1,0 +1,23 @@
+.loader {
+    width: 1em;
+    height: 1em;
+
+    animation: spinning-loader-animation 1s linear infinite;
+    // folosim animatia care o declaram mai jos
+    border-radius: 50%;
+    border: 4px solid lighten($color: $color-primary, $amount: 20);
+    // scss ne permite sa editam anumite culori prin anumite functii speciale gen lighten sau darken ,
+    //  cu ajutorul acestei functii vom ajusta luminozitatea culori principale cu 20%
+
+    border-top-color: $color-primary;
+}
+
+@keyframes spinning-loader-animation {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
