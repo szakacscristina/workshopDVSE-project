@@ -1,0 +1,12 @@
+.home {
+    display: flex;
+
+    .vehicles-table{
+        flex: 1;
+    }
+
+    .tires-table{
+        flex: 1;
+        margin-left: $spacing-m;
+    }
+}

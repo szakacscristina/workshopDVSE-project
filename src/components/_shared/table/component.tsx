@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Text } from "../index"
+import { Loader, Text } from "../index"
 
 type Props<T> = {
     className?: string
@@ -21,7 +21,7 @@ class Table<T> extends React.Component<Props<T>> {
         if (loading) { //Randare conditionata de anumita proprietate  
             return (
                 <div className={"table " + className ?? ""}>
-                    {/* <Loader /> */}
+                    <Loader /> 
                 </div>
             )
         }

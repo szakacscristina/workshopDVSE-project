@@ -31,7 +31,6 @@
             background-color: lighten($color: $color-default, $amount: 30);
 
             &:nth-of-type(even) {
-                //pentru fiecare element par
                 background-color: $color-default;
             }
 

@@ -1,16 +1,16 @@
-import { Vehicle } from "../../models"
+import { Tire, Vehicle } from "../../models"
 import axios from "axios"
 
-export function getAllVehicles() {
-    return new Promise<Vehicle[]>((resolve, reject) => {
+export function addTyreToBasket() {
+    return new Promise<Tire[]>((resolve, reject) => {
 
         const host = "https://localhost:5001/"
-        const method = "api/VehiclesAndTyresMain/GetVehicleModelsWithManufacturers"
+        const method = "/api/Tyres/AddTyreToBasket" 
 
         axios.get(host + method).then(
             response => {
                 if (response.data) {
-                    resolve(mapResponseToVehicle(response.data))
+                    // resolve(mapResponseToVehicle(response.data))
                 }
 
                 else

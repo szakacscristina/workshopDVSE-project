@@ -30,7 +30,7 @@ type StoreProps = {
     vehiclesItems: Vehicle[]
     selectedVehicle?: Vehicle
     tires: Tire[]
-    tiresLoading: boolean
+    tiresLoading?: boolean
 }
 
 type DispatchProps = {

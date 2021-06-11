@@ -4,7 +4,7 @@ import axios from "axios"
 export function getTiresById(id: number) {
     return new Promise<Tire[]>((resolve, reject) => {
 
-        const host = "https://tyrestore-api.dvsero.tk/"
+        const host = "https://localhost:5001/"
         const method = "api/VehiclesAndTyresMain/GetTyreByVehicleModelId/" + id
 
         axios.get(host + method).then(
@@ -23,7 +23,7 @@ export function getTiresById(id: number) {
 }
 
 function mapResponseToTires(data: any): Tire[] {
-    return data.map(x => ({
+    return data.map((x:any) => ({
         brand: x.brand,
         season: x.season,
         id: x.id,

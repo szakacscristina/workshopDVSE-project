@@ -1,4 +1,3 @@
-
 import { ComponentActionType } from "./model"
 import { Vehicle, Tire } from "../data/models"
 
@@ -11,15 +10,15 @@ function vehiclesLoaded(items: Vehicle[]): ComponentActionType {
 }
 
 function selectVehicle(vehicle: Vehicle): ComponentActionType {
-    return { type: "SELECT_VEHICLE", payload: vehicle }
+    return { type: "SELECT_VEHICLE", payload: vehicle}
 }
 
 function tiresLoaded(tires: Tire[]): ComponentActionType {
-    return { type: "TIRES_LOADED", payload: tires }
+    return { type: "TIRES_LOADED", payload: tires}
 }
 
 function addTireToBasket(tire: Tire): ComponentActionType {
-    return { type: "ADD_TIRE_TO_BASKET", payload: tire }
+    return { type: "ADD_TIRE_TO_BASKET", payload: tire}
 }
 
 
@@ -32,15 +31,3 @@ export const Actions = {
 }
 
 export type IActions = typeof Actions
-// in ts cu typeof vom extrage tipul pe care in are un anumit obiect, in cazul de fata a obiectului Actions
-/*
-este similar cu definirea typului
-expor type IActions = {
-    vehiclesLoading: () => void
-    vehiclesLoaded: (items: Vehicle[]) => void
-    selectVehicle: (vehicle: Vehicle) => void
-    tiresLoaded: (tires: Tire[]) => void
-    addTireToBasket: (tire: Tire) => void
-}
-
-*/

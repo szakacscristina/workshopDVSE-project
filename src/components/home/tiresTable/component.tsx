@@ -32,8 +32,6 @@ class TiresTable extends React.Component<Props> {
     }
 
     renderActions(tire: Tire) {
-
-        //are nevoie de bind this deoarece aici se apeleaza - functia onAddToBasket din props-uri
         return (
             <Button
                 icon="add"
