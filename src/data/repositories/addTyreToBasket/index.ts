@@ -4,7 +4,7 @@ import axios from "axios"
 export function addTyreToBasket() {
     return new Promise<Tire[]>((resolve, reject) => {
 
-        const host = "https://localhost:5001/"
+        const host = "https://localhost:44302/"
         const method = "/api/Tyres/AddTyreToBasket" 
 
         axios.get(host + method).then(

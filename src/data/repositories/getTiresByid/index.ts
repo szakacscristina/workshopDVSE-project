@@ -4,10 +4,10 @@ import axios from "axios"
 export function getTiresById(id: number) {
     return new Promise<Tire[]>((resolve, reject) => {
 
-        const host = "https://localhost:5001/"
+        const host = "https://localhost:44302/"
         const method = "api/VehiclesAndTyresMain/GetTyreByVehicleModelId/" + id
 
-        axios.get(host + method).then(
+        axios.post(host + method).then(
             response => {
                 if (response.data) {
                     resolve(mapResponseToTires(response.data))

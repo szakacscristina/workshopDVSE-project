@@ -4,7 +4,7 @@ import axios from "axios"
 export function getAllVehicles() {
     return new Promise<Vehicle[]>((resolve, reject) => {
 
-        const host = "https://localhost:5001/"
+        const host = "https://localhost:44302/"
         const method = "api/VehiclesAndTyresMain/GetVehicleModelsWithManufacturers"
 
         axios.get(host + method).then(
