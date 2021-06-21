@@ -48,7 +48,7 @@ export function reducer(state = DEFAULT_STATE, action: ComponentActionType): Sto
             return {
                 ...state,
                 // daca paylodul este egal cu elementul selectat atunci atunci se va sterge valoarea selectata 
-                selectedVehicle: state.selectedVehicle?.id != action.payload.id ? action.payload : undefined,
+                selectedVehicle: state.selectedVehicle?.id != action.payload?.id ? action.payload : undefined,
                 tires: {
                     items: [],
                     loading: true
@@ -68,6 +68,20 @@ export function reducer(state = DEFAULT_STATE, action: ComponentActionType): Sto
         case "ADD_TIRE_TO_BASKET": {
             return {
                 ...state,
+                tires:{
+                    ...state.tires,
+                    items:state.tires.items.map(x=>{
+                        if(x.id!= action.payload.id){
+                        return x;
+                    } else 
+                    {
+                        return {
+                            ...x,
+                            stock:x.stock-1
+                        }
+                    }})
+
+                },
                 basket: {
                     items: [...state.basket.items, action.payload]
                     //  daca a este un array-> sintaxa [...a,n] este similara cu a.push(n)  doar ca se va returna un array nou la final , in schimb ce 

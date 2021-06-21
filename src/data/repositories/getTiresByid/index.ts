@@ -28,7 +28,7 @@ function mapResponseToTires(data: any): Tire[] {
         season: x.season,
         id: x.id,
         size: x.tyre.name,
-
         price: x.price,
+        stock: x.stock
     }))
 }

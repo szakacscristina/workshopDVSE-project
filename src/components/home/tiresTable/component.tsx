@@ -31,6 +31,10 @@ class TiresTable extends React.Component<Props> {
         return <Text>{tire.season}</Text>
     }
 
+    renderStock(tire: Tire) {
+        return <Text strong skin="primary">{tire.stock || "not available"}</Text>
+    }
+
     renderActions(tire: Tire) {
         return (
             <Button
@@ -49,10 +53,10 @@ class TiresTable extends React.Component<Props> {
         return (
             <Table
                 className="tires-table"
-                headers={["Size", "Brand", "Season", "Price", "Actions"]}
+                headers={["Size", "Brand", "Season", "Price","Stock", "Actions"]}
                 loading={loading}
                 items={tires}
-                columns={[this.renderSize, this.renderBrand, this.renderSeason, this.renderPrice, this.renderActions.bind(this)]}
+                columns={[this.renderSize, this.renderBrand, this.renderSeason, this.renderPrice, this.renderStock, this.renderActions.bind(this)]}
             />
         )
     }

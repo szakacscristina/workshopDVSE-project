@@ -21,7 +21,7 @@ export type StoreType = {
 export type ComponentActionType =
     | { type: "VEHICLES_LOADING" }
     | { type: "VEHICLES_LOADED", payload: Vehicle[] }
-    | { type: "SELECT_VEHICLE", payload: Vehicle }
+    | { type: "SELECT_VEHICLE", payload?: Vehicle }
     | { type: "TIRES_LOADED", payload: Tire[] }
     | { type: "ADD_TIRE_TO_BASKET", payload: Tire }
 

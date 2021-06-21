@@ -9,7 +9,7 @@ function vehiclesLoaded(items: Vehicle[]): ComponentActionType {
     return { type: "VEHICLES_LOADED", payload: items }
 }
 
-function selectVehicle(vehicle: Vehicle): ComponentActionType {
+function selectVehicle(vehicle?: Vehicle): ComponentActionType {
     return { type: "SELECT_VEHICLE", payload: vehicle}
 }
 

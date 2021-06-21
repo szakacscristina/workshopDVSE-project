@@ -19,7 +19,7 @@
 
     &:hover {
         // stilizare doar in cazul in care mause-ul este peste button
-        background-color: $color-highlight;
+        background-color: #347C98;
     }
 
     &__skin {
@@ -28,7 +28,7 @@
         }
 
         &--highlight {
-            background-color: $color-highlight;
+            background-color:#347C98;
         }
 
         &--danger {
@@ -51,7 +51,7 @@
     }
 
     &--active {
-        background-color: $color-highlight;
+        background-color: #347C98;
     }
 
     &--disabled {

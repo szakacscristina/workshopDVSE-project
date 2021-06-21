@@ -54,11 +54,17 @@ class Home extends React.Component<Props> {
     }
 
     handleVehicleSelect(vehicle: Vehicle) {
+       
+        
         const { actions } = this.props
-        actions.selectVehicle(vehicle)
-        Repositories.getTiresById(vehicle.id).then(tires => {
-            actions.tiresLoaded(tires)
-        })
+        if(vehicle.id==this.props.selectedVehicle?.id){
+            actions.selectVehicle(undefined)
+        }else {
+            actions.selectVehicle(vehicle)
+            Repositories.getTiresById(vehicle.id).then(tires => {
+                actions.tiresLoaded(tires)
+            })
+        }
     }
 
     /*
