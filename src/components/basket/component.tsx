@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Text, Icon } from "../_shared"
+import { Text, Icon, Table } from "../_shared"
 import { Tire } from '../../data/models'
 import { StoreType } from '../../business/model'
 import { connect } from 'react-redux'
@@ -18,13 +18,31 @@ type StoreProps = {
 
 
 class Basket extends React.Component<Props> {
+    renderBrand(tire:Tire){
+        return (<Text>{tire.brand}</Text>)
+    }
+
+    renderSeason(tire:Tire){
+        return (<Text>{tire.season}</Text>)
+    }
+
+    renderSize(tire:Tire){
+        return (<Text>{tire.size}</Text>)
+    }
     render() {
         return (
-            <div >
-                <Text>Basket</Text>
-                {this.props.basketItems.map(
-                    basketItem => <div>{basketItem.brand} , {basketItem.season} , {basketItem.size}</div>
-                )}
+            <div className="basket" >
+               { this.props.basketItems.length!=0 &&  // daca sunt elemente in basket se afiseaza tabelul 
+                <Table
+                    className="basket-table"
+                    headers={["Brand", "Season", "Size"]}
+                    items={this.props.basketItems}
+                    columns={[this.renderBrand, this.renderSeason, this.renderSize]}
+                />
+               } {
+                   this.props.basketItems.length==0 &&
+                   <Text>NU AI SELECTAT NICIUN ITEM</Text>
+               }
             </div>
 
         )

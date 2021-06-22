@@ -31,6 +31,7 @@ type StoreProps = {
     selectedVehicle?: Vehicle
     tires: Tire[]
     tiresLoading?: boolean
+    vehiclesLoading?: boolean
 }
 
 type DispatchProps = {
@@ -54,11 +55,9 @@ class Home extends React.Component<Props> {
     }
 
     handleVehicleSelect(vehicle: Vehicle) {
-       
-        
         const { actions } = this.props
-        if(vehicle.id==this.props.selectedVehicle?.id){
-            actions.selectVehicle(undefined)
+        if(vehicle.id==this.props.selectedVehicle?.id){ 
+            actions.selectVehicle(undefined) // am pus undefined pt ca am obs ca tabelul de tires este afisat numai cand avem selectat un vehicul 
         }else {
             actions.selectVehicle(vehicle)
             Repositories.getTiresById(vehicle.id).then(tires => {
@@ -97,6 +96,7 @@ class Home extends React.Component<Props> {
                 <VehicleTable
                     onSelectVehicle={this.handleVehicleSelect.bind(this)}
                     vehicles={this.props.vehiclesItems}
+                    loading={this.props.vehiclesLoading}
                     selectedVehicle={this.props.selectedVehicle}
                 />
 
@@ -120,7 +120,8 @@ function mapStateToProps(store: StoreType): StoreProps {
         vehiclesItems: store.vehicles.items,
         selectedVehicle: store.selectedVehicle,
         tires: store.tires.items,
-        tiresLoading: store.tires.loading
+        tiresLoading: store.tires.loading,
+        vehiclesLoading: store.vehicles.loading
     }
 }
 

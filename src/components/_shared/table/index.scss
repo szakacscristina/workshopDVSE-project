@@ -9,6 +9,7 @@
         display: flex;
         text-transform: uppercase;
         background-color: darken($color: $color-default, $amount: 0);
+
       
 
         .text {
@@ -16,6 +17,7 @@
             padding: $spacing-s;
             flex: 1;
             color:black;
+            font-size: $textSize-xl;
         }
     }
 
@@ -49,6 +51,7 @@
                 justify-content: center;
                 padding: $spacing-s;
                 flex: 1;
+                align-items: center;
             }
         }
     }

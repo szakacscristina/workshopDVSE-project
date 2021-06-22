@@ -66,12 +66,13 @@ export function reducer(state = DEFAULT_STATE, action: ComponentActionType): Sto
             }
         }
         case "ADD_TIRE_TO_BASKET": {
+            const tire=action.payload // am pus aici pt a lucra mai usor mai jos
             return {
                 ...state,
                 tires:{
                     ...state.tires,
                     items:state.tires.items.map(x=>{
-                        if(x.id!= action.payload.id){
+                        if(x.id!= tire.id){
                         return x;
                     } else 
                     {

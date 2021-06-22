@@ -1,6 +1,7 @@
 $textSize-s: 0.75em;
 $textSize-m: 1em;
 $textSize-l: 1.25em;
+$textSize-xl: 1.5em;
 
 $color-primary: #2196f3;
 $color-highlight: #f3ae21;
@@ -24,6 +25,9 @@ $shadow:rgba(0,0,0,0.5) 0px 5px 15px 0px;
 @import "./components/_shared/table";
 @import "./components/home";
 @import "./components/_shared/loader/";
+@import "./components/basket/";
+
+
 
 
 html {
